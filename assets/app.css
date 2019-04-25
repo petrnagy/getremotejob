@@ -1,0 +1,42 @@
+._start { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; }
+._btn-start img { height: 20px; margin-top: -2px; }
+._slide { background-image: url(img/earthv2.jpg); background: linear-gradient(rgba(43,62,80,.8), rgba(43,62,80,.99)), url(img/earthv2.jpg); background-repeat: no-repeat; background-position-x: center; background-size: cover; }
+._slide { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+._job { margin-bottom: 20px; }
+._job * { cursor: pointer; }
+._job ._img-wrapper { overflow: hidden; }
+._job img { height: 200px; width: 100%; display: block; filter: blur(1px); }
+._job:hover img { filter: none; }
+._job:hover .card { border: 1px solid #5cb85c; }
+._card-body { position: relative; overflow: hidden; }
+._job ._label-diff { position: absolute; right: -25px; top: 11px; text-transform: uppercase; font-weight: 300; transform: rotate(45deg); background-color: gray; padding: 5px 30px; font-size: 12px; opacity: 0.7; }
+._job ._label-diff.days { background-color: #5cb85c; }
+._job ._label-diff.weeks { background-color: #5bc0de; }
+._job ._label-diff.months { background-color: #DF691A; right: -30px; }
+._job ._label-diff.years { background-color: #d9534f }
+._h2 { margin-bottom: 25px; }
+._footer { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; margin-top: 50px; }
+._anchor:hover { filter: brightness(150%); }
+._thin { font-weight: 300 !important; }
+._btn-help { position: absolute; right: 10px; top: 10px; }
+._btn-help img { height: 20px; margin-top: -3px; margin-left: 3px; }
+._btn-outline-white { color: #EBEBEB; border-color: #EBEBEB; }
+._btn-outline-white:hover { background-color: gray; }
+._relative { position: relative; }
+._menu { position: absolute; left: 66%; bottom: -20px; }
+
+._img-hover-zoom--quick-zoom img { transform-origin: 0 0; transition: transform .33s, visibility .33s ease-in; }
+._img-hover-zoom--quick-zoom:hover img { transform: scale(1.025,1.025); }
+
+/* <Made by ME widget> */
+/* Source: https://www.tomatoid.com/@/wp-content/uploads/2019/03/malaysia_200x200.jpg */
+#made-by-pn-widget { position: fixed; left: -4px; bottom: -4px; z-index: 1000; }
+#made-by-pn-widget a { color: #0084b4; }
+#made-by-pn-widget a:hover, #made-by-pn-widget a:active, #made-by-pn-widget a:focus { color: #00aced; }
+#made-by-pn-widget .text { width: 150px; text-align: center; position: absolute; left: 5px; top: 15px; padding: 5px 10px; border-radius: 5px; background-color: white; font-size: 12px; font-family: 'Courier New', Courier, monospace; z-index: -1; line-height: 16px; }
+#made-by-pn-widget .img-wrapper { border-radius: 50%; width: 56px; height: 56px; background-color: white; z-index: 1001; }
+#made-by-pn-widget img { border-radius: 50%; width: 50px; height: 50px; margin: 3px 0 0 3px; z-index: 1001; }
+@media screen and (max-width: 799px) { #made-by-pn-widget { display: none !important; } }
+#made-by-pn-widget .img-wrapper, #made-by-pn-widget .text { -webkit-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.24); -moz-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.24); box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.24); }
+#made-by-pn-widget:hover .text { left: 46px; }
+/* </Made by ME widget> */
