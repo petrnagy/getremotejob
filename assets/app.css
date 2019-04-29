@@ -6,11 +6,10 @@
 ._job { margin-bottom: 20px; }
 ._job * { cursor: pointer; }
 ._job ._img-wrapper { overflow: hidden; }
-._job img.photo { height: 200px; width: 100%; display: block; }
-._job img.photo { filter: grayscale(90%) brightness(50%); }
-._job:hover img.photo { filter: none; }
-._job:hover .card { border: 1px solid #5cb85c; }
-/* ._job:not(:hover), ._job:not(:active), ._job:not(:focus) { opacity: .75; } */
+._job img.photo { height: 200px; width: 100%; display: block; object-fit: cover; }
+body.is-desktop ._job img.photo { filter: grayscale(90%) brightness(50%); }
+body.is-desktop ._job:hover img.photo { filter: none; }
+body.is-desktop ._job:hover .card { border: 1px solid #5cb85c; }
 ._card-body { position: relative; overflow: hidden; }
 ._job ._label-diff { position: absolute; right: -25px; top: 11px; text-transform: uppercase; font-weight: 300; transform: rotate(45deg); background-color: gray; padding: 5px 30px; font-size: 12px; opacity: 0.7; }
 ._job ._label-diff.days { background-color: #5cb85c; }
@@ -18,23 +17,44 @@
 ._job ._label-diff.months { background-color: #DF691A; right: -30px; }
 ._job ._label-diff.years { background-color: #d9534f }
 ._job ._card-link img._external { height: 15px; position: relative; top: -5px; left: 0px; opacity: .75; }
-/* ._job ._card-link img { height: 20px; position: relative; top: -1px; left: -4px; } */
-._job ._card-link:hover img { filter: brightness(70%); }
+body.is-desktop ._job ._card-link:hover img { filter: brightness(70%); }
 ._h2 { margin-bottom: 25px; }
 ._footer { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; margin-top: 50px; }
-._anchor:hover { filter: brightness(150%); }
+body.is-desktop ._anchor:hover { filter: brightness(150%); }
 ._thin { font-weight: 300 !important; }
 ._btn-help { position: absolute; right: 215px; top: 10px; }
 ._btn-help img { height: 20px; margin-top: -3px; margin-left: 3px; }
 ._btn-workplacelist { position: absolute; right: 10px; top: 10px; }
 ._btn-outline-white { color: #EBEBEB; border-color: #EBEBEB; }
-._btn-outline-white:hover { background-color: gray; }
+body.is-desktop ._btn-outline-white:hover { background-color: gray; }
 ._relative { position: relative; }
 ._menu { position: absolute; left: 50%; bottom: 100px; }
 ._back-to-top { position: absolute; right: 0; top: -35px; }
-
 ._img-hover-zoom--quick-zoom img.photo { transform-origin: center; transition: transform .33s, visibility .33s ease-in; }
-._img-hover-zoom--quick-zoom:hover img.photo { transform: scale(1.05,1.05) rotate(-1deg); }
+body.is-desktop ._img-hover-zoom--quick-zoom:hover img.photo { transform: scale(1.05,1.05) rotate(-1deg); }
+
+@media screen and (max-width: 768px) {
+    ._menu { left: 20px; bottom: 50px; text-align: center; }
+    ._slide ._header { padding: 20px; }
+    ._quick-nav { display: none; }
+    ._card-link { display: block; }
+    .card-link+.card-link { margin-left: 0; }
+    ._container { max-width: 100%; }
+}
+@media screen and (max-width: 450px) {
+    /* btns */
+    ._btn-help, ._btn-workplacelist { padding: 3px 6px; font-size: 12px; }
+    ._btn-help img { height: 14px; margin-top: -2px; }
+    ._btn-help { left: 10px; right: initial; }
+    ._menu { bottom: 25px; }
+    ._second { font-size: 10px; opacity: .75; }
+}
+@media screen and (max-height: 600px) {
+    ._menu { bottom: 25px; }
+}
+@media screen and (max-height: 400px) {
+    ._btn-help, ._btn-workplacelist, ._menu { display: none; }
+}
 
 /* <Made by ME widget> */
 /* Source: https://www.tomatoid.com/@/wp-content/uploads/2019/03/malaysia_200x200.jpg */

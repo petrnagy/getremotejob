@@ -8,6 +8,7 @@
     <title>🏝️Get a Fucking Remote Job</title>
     <meta name="description" content="Curated, searchable list of jobs you can learn and do remotely. Maybe you didn't realize how many are actually there!">
     <meta name="author" content="Petr Nagy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link async defer rel="stylesheet" href="assets/bootstrap.min.css">
     <link async defer rel="stylesheet" href="assets/app.css?v=1.0.0">
@@ -17,17 +18,17 @@
 <body id="body">
     <div class="_bg"></div>
     <header class="_slide">
-        <div class="page-header">
+        <div class="page-header _header">
             <div class="row">
-                <div class="offset-md-2 col-md-6">
-                    <h1 class="text-left _heading">Get a Fucking Remote Job.</h1>
-                    <p class="lead text-left _first">
+                <div class="offset-md-2 col-md-8 offset-lg-2 col-lg-6">
+                    <h1 class="text-center text-md-left _heading">Get a Fucking Remote Job.</h1>
+                    <p class="lead text-center text-md-left _first">
                         This is a crossroad for motherfuckers like you wanting to work remotely and shit but are so fucking lost they can’t even research this stuff by themself.
                     </p>
-                    <p class="text-left small _thin _second">
+                    <p class="text-center text-md-left small _thin _second">
                         Notice: You won’t find any life coaching, virtual assistant, dropshipping, travel blogger or influencer “jobs” here, because fuck those parodies.
                     </p>
-                    <p class="text-left _third">
+                    <p class="text-center text-md-left _third">
                         <a onclick="scroll_to_id('start');" href="#start" class="btn btn-success _btn-start">
                             Let’s get to it, motherfucker
                             <img src="assets/img/chevron-double-down.svg" alt="Continue" />
@@ -45,106 +46,18 @@
         </a>
         <nav class="_menu">
             <div class="small _thin">
-                quick nav<br />
+                <span class="_quick-nav">quick nav</span><br />
                 <a onclick="return scroll_to_id('engineering');" class="text-success" href="#engineering">#engineering</a> ·
                 <a onclick="return scroll_to_id('design');" class="text-success" href="#design">#design</a> ·
                 <a onclick="return scroll_to_id('marketing');" class="text-success" href="#marketing">#marketing</a> ·
                 <a onclick="return scroll_to_id('consulting');" class="text-success" href="#consulting">#consulting</a> ·
                 <a onclick="return scroll_to_id('deskjob');" class="text-success" href="#deskjob">#deskjob</a> ·
-                <a onclick="return scroll_to_id('entrepreneurship');" class="text-success" href="#entrepreneurship">#entrepreneurship</a> 
+                <a onclick="return scroll_to_id('entrepreneurship');" class="text-success" href="#entrepreneurship">#entrepreneurship</a>
             </div>
         </nav>
     </header>
     <section id="start" class="_start">
-        <div class="container">
-            <!--<article>
-                <div class="row">
-                    <h2 id="section" class="h2 col-lg-12 _h2">Section <a href="#section" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
-                </div>
-                <div class="row">
-                    <div class="_job-pls" data-title="" data-desc="" data-difficulty="">
-                    </div>
-                </div>
-            </article>-->
-            <article>
-                <div class="row">
-                    <h2 id="consulting" class="h2 col-lg-12 _h2">Consulting <a href="#consulting" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
-                </div>
-                <div class="row">
-                    <div class="_job-pls" data-title="UX specialist" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="UI specialist" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Woocommerce consultant" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Wordpress specialist" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Content marketing specialist" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Marketing specialist" data-desc="" data-difficulty="">
-                    </div>
-                </div>
-            </article>
-            <article>
-                <div class="row">
-                    <h2 id="deskjob" class="h2 col-lg-12 _h2">Desk job <a href="#deskjob" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
-                </div>
-                <div class="row">
-                    <div class="_job-pls" data-title="Translator" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Customer support" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Social media curator" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Product tester" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="English teacher" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Individual teacher" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Accountant" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Virtual assistant" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Business consultant" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Remote digger operator" data-desc="This is not a joke!" data-difficulty="years" data-studyresource="https://9gag.com/gag/aerWO6j">
-                    </div>
-                </div>
-            </article>
-            <article>
-                <div class="row">
-                    <h2 id="entrepreneurship" class="h2 col-lg-12 _h2">Entrepreneurship <a href="#entrepreneurship" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
-                </div>
-                <div class="row">
-                    <div class="_job-pls" data-title="Indie maker" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Web developer" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Sellsword developer" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Online marketer" data-desc="" data-difficulty="">
-                    </div>
-                </div>
-            </article>
-            <article>
-                <div class="row">
-                    <h2 id="marketing" class="h2 col-lg-12 _h2">Online marketing <a href="#marketing" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
-                </div>
-                <div class="row">
-                    <div class="_job-pls" data-title="Copywriter" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="PPC specialist" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Sales representative" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Content creator" data-desc="" data-difficulty="">
-                    </div>
-                    <div class="_job-pls" data-title="Performance marketer" data-desc="" data-difficulty="">
-                    </div>
-                </div>
-            </article>
-
+        <div class="container _container">
             <article>
                 <div class="row">
                     <h2 id="engineering" class="h2 col-lg-12 _h2">Engineering <a href="#engineering" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
@@ -180,6 +93,7 @@
                     </div>
                 </div>
             </article>
+
             <article>
                 <div class="row">
                     <h2 id="design" class="h2 col-lg-12 _h2">Design <a href="#design" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
@@ -205,6 +119,89 @@
                     </div>
                 </div>
             </article>
+
+            <article>
+                <div class="row">
+                    <h2 id="marketing" class="h2 col-lg-12 _h2">Online marketing <a href="#marketing" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
+                </div>
+                <div class="row">
+                    <div class="_job-pls" data-title="Copywriter" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="PPC specialist" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Sales representative" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Content creator" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Performance marketer" data-desc="" data-difficulty="">
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="row">
+                    <h2 id="consulting" class="h2 col-lg-12 _h2">Consulting <a href="#consulting" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
+                </div>
+                <div class="row">
+                    <div class="_job-pls" data-title="UX specialist" data-desc="" data-difficulty="years">
+                    </div>
+                    <div class="_job-pls" data-title="UI specialist" data-desc="" data-difficulty="years">
+                    </div>
+                    <div class="_job-pls" data-title="Woocommerce consultant" data-desc="" data-difficulty="months">
+                    </div>
+                    <div class="_job-pls" data-title="Wordpress specialist" data-desc="" data-difficulty="months">
+                    </div>
+                    <div class="_job-pls" data-title="Content marketing specialist" data-desc="" data-difficulty="months">
+                    </div>
+                    <div class="_job-pls" data-title="Marketing specialist" data-desc="" data-difficulty="years">
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="row">
+                    <h2 id="deskjob" class="h2 col-lg-12 _h2">Desk job <a href="#deskjob" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
+                </div>
+                <div class="row">
+                    <div class="_job-pls" data-title="Translator" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Customer support" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Social media curator" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Product tester" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="English teacher" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Individual teacher" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Accountant" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Virtual assistant" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Business consultant" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Remote digger operator" data-desc="This is not a joke!" data-difficulty="years" data-studyresource="https://9gag.com/gag/aerWO6j">
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="row">
+                    <h2 id="entrepreneurship" class="h2 col-lg-12 _h2">Entrepreneurship <a href="#entrepreneurship" class="_anchor"><img src="assets/img/link-variant.svg" alt="Anchor this" /></a></h2>
+                </div>
+                <div class="row">
+                    <div class="_job-pls" data-title="Indie maker" data-desc="Make cool shit" data-difficulty="months" data-studyresource="http://indiehackers.com/" data-jobboard="http://nugget.one/">
+                    </div>
+                    <div class="_job-pls" data-title="Web developer" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Sellsword developer" data-desc="" data-difficulty="">
+                    </div>
+                    <div class="_job-pls" data-title="Online marketer" data-desc="" data-difficulty="">
+                    </div>
+                </div>
+            </article>
+
         </div>
     </section>
     <footer id="footer" class="_footer">
