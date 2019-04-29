@@ -34,7 +34,7 @@ body.is-desktop ._btn-outline-white:hover { background-color: gray; }
 body.is-desktop ._img-hover-zoom--quick-zoom:hover img.photo { transform: scale(1.05,1.05) rotate(-1deg); }
 
 @media screen and (max-width: 768px) {
-    ._menu { left: 20px; bottom: 50px; text-align: center; }
+    ._menu { left: 0; right: 0; bottom: 50px; text-align: center; }
     ._slide ._header { padding: 20px; }
     ._quick-nav { display: none; }
     ._card-link { display: block; }
