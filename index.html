@@ -88,7 +88,7 @@
                         Notice: Whatever remote job you choose to pursue, you will have to invest certain amount of time into obtaining the necessary skills. There is no way around it, because otherwise fucking everyone would do it.
                     </p>
                     <p class="text-center text-md-left _third">
-                        <a onclick="return scroll_to_id('start');" href="#start" class="btn btn-success _btn-start">
+                        <a onclick="return scroll_to_id(event, 'start');" href="#start" class="btn btn-success _btn-start">
                             Let’s get to it, motherfucker
                             <img src="assets/img/chevron-double-down.svg" alt="Continue" />
                         </a>
@@ -106,18 +106,18 @@
         <nav class="_menu">
             <div class="small _thin">
                 <span class="_quick-nav">I don't completely suck at:</span><br />
-                <b class="_only-scrolled"><a onclick="return scroll_to_id('body');" class="text-success" href="#body">↑top</a> ·</b>
-                <a onclick="return scroll_to_id('engineering');" class="text-success" href="#engineering">#engineering</a> ·
-                <a onclick="return scroll_to_id('marketing');" class="text-success" href="#marketing">#marketing</a> ·
-                <a onclick="return scroll_to_id('design');" class="text-success" href="#design">#design</a> ·
-                <a onclick="return scroll_to_id('deskjob');" class="text-success" href="#deskjob">#deskjob</a> <span class="_only-floating">·</span>
+                <b class="_only-scrolled"><a onclick="return scroll_to_id(event, 'body');" class="text-success" href="#body">↑top</a> ·</b>
+                <a onclick="return scroll_to_id(event, 'engineering');" class="text-success" href="#engineering">#engineering</a> ·
+                <a onclick="return scroll_to_id(event, 'marketing');" class="text-success" href="#marketing">#marketing</a> ·
+                <a onclick="return scroll_to_id(event, 'design');" class="text-success" href="#design">#design</a> ·
+                <a onclick="return scroll_to_id(event, 'deskjob');" class="text-success" href="#deskjob">#deskjob</a> <span class="_only-floating">·</span>
                 <div class="hidden-md-up"></div>
-                <a onclick="return scroll_to_id('consulting');" class="text-success" href="#consulting">#consulting</a> ·
-                <a onclick="return scroll_to_id('entrepreneurship');" class="text-success" href="#entrepreneurship">#entrepreneurship</a> · 
-                <a onclick="return scroll_to_id('other');" class="text-success" href="#other">#other</a>
+                <a onclick="return scroll_to_id(event, 'consulting');" class="text-success" href="#consulting">#consulting</a> ·
+                <a onclick="return scroll_to_id(event, 'entrepreneurship');" class="text-success" href="#entrepreneurship">#entrepreneurship</a> · 
+                <a onclick="return scroll_to_id(event, 'other');" class="text-success" href="#other">#other</a>
                 <hr class="hidden-md-up" />
-                <a onclick="return scroll_to_id('job-boards');" class="text-success _margin" href="#job-boards"><strong>Remote job boards ↓</strong></a>
-                <!-- <a onclick="return scroll_to_id('bootcamps');" class="text-success" href="#bootcamps"><strong>Coding bootcamps ↓</strong></a> -->
+                <a onclick="return scroll_to_id(event, 'job-boards');" class="text-success _margin" href="#job-boards"><strong>Remote job boards ↓</strong></a>
+                <!-- <a onclick="return scroll_to_id(event, 'bootcamps');" class="text-success" href="#bootcamps"><strong>Coding bootcamps ↓</strong></a> -->
             </div>
         </nav>
     </header>
@@ -125,7 +125,7 @@
         <div class="container _container">
             <article>
                 <div class="row _engineering _section">
-                    <h2 id="engineering" class="h2 col-lg-12 _h2">Engineering <a onclick="return scroll_to_id('engineering');" href="#engineering" class="_anchor">#</a></h2>
+                    <h2 id="engineering" class="h2 col-lg-12 _h2">Engineering <a onclick="return scroll_to_id(event, 'engineering');" href="#engineering" class="_anchor">#</a></h2>
                 </div>
                 <div class="row">
                     <table class="table table-hover table-responsive-md _table-responsive">
@@ -163,7 +163,7 @@
 
             <article>
                 <div class="row _marketing _section">
-                    <h2 id="marketing" class="h2 col-lg-12 _h2">Online marketing <a onclick="return scroll_to_id('marketing');" href="#marketing" class="_anchor">#</a></h2>
+                    <h2 id="marketing" class="h2 col-lg-12 _h2">Online marketing <a onclick="return scroll_to_id(event, 'marketing');" href="#marketing" class="_anchor">#</a></h2>
                 </div>
                 <div class="row">
                     <table class="table table-hover table-responsive-md _table-responsive">
@@ -185,7 +185,7 @@
 
             <article>
                 <div class="row _design _section">
-                    <h2 id="design" class="h2 col-lg-12 _h2">Design <a onclick="return scroll_to_id('design');" href="#design" class="_anchor">#</a></h2>
+                    <h2 id="design" class="h2 col-lg-12 _h2">Design <a onclick="return scroll_to_id(event, 'design');" href="#design" class="_anchor">#</a></h2>
                 </div>
                 <div class="row">
                     <table class="table table-hover table-responsive-md _table-responsive">
@@ -213,7 +213,7 @@
 
             <article>
                 <div class="row _deskjob _section">
-                    <h2 id="deskjob" class="h2 col-lg-12 _h2">Desk job <a onclick="return scroll_to_id('deskjob');" href="#deskjob" class="_anchor">#</a></h2>
+                    <h2 id="deskjob" class="h2 col-lg-12 _h2">Desk job <a onclick="return scroll_to_id(event, 'deskjob');" href="#deskjob" class="_anchor">#</a></h2>
                 </div>
                 <div class="row">
                     <table class="table table-hover table-responsive-md _table-responsive">
@@ -239,7 +239,7 @@
 
             <article>
                 <div class="row _consulting _section">
-                    <h2 id="consulting" class="h2 col-lg-12 _h2">Consulting <a onclick="return scroll_to_id('consulting');" href="#consulting" class="_anchor">#</a></h2>
+                    <h2 id="consulting" class="h2 col-lg-12 _h2">Consulting <a onclick="return scroll_to_id(event, 'consulting');" href="#consulting" class="_anchor">#</a></h2>
                 </div>
                 <div class="row">
                     <table class="table table-hover table-responsive-md _table-responsive">
@@ -265,7 +265,7 @@
 
             <article>
                 <div class="row _entrepreneurship _section">
-                    <h2 id="entrepreneurship" class="h2 col-lg-12 _h2">Entrepreneurship <a onclick="return scroll_to_id('entrepreneurship');" href="#entrepreneurship" class="_anchor">#</a></h2>
+                    <h2 id="entrepreneurship" class="h2 col-lg-12 _h2">Entrepreneurship <a onclick="return scroll_to_id(event, 'entrepreneurship');" href="#entrepreneurship" class="_anchor">#</a></h2>
                 </div>
                 <div class="row">
                     <table class="table table-hover table-responsive-md _table-responsive">
@@ -283,7 +283,7 @@
 
             <article>
                 <div class="row _other _section">
-                    <h2 id="other" class="h2 col-lg-12 _h2">Other options <a onclick="return scroll_to_id('other');" href="#other" class="_anchor">#</a></h2>
+                    <h2 id="other" class="h2 col-lg-12 _h2">Other options <a onclick="return scroll_to_id(event, 'other');" href="#other" class="_anchor">#</a></h2>
                 </div>
                 <div class="row">
                     <table class="table table-hover table-responsive-md _table-responsive">
@@ -299,7 +299,7 @@
 
             <article>
                 <div class="row _jobboards _section">
-                    <h2 id="job-boards" class="h2 col-lg-12 _h2">Remote job boards <a onclick="return scroll_to_id('job-boards');" href="#job-boards" class="_anchor">#</a></h2>
+                    <h2 id="job-boards" class="h2 col-lg-12 _h2">Remote job boards <a onclick="return scroll_to_id(event, 'job-boards');" href="#job-boards" class="_anchor">#</a></h2>
                 </div>
                 <div class="row">
                     <table class="table table-hover table-responsive-md _table-responsive">
@@ -399,7 +399,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center relative">
-                    <a onclick="return scroll_to_id('body');" href="#body" class="_back-to-top text-success">Back to top ↑</a>
+                    <a onclick="return scroll_to_id(event, 'body');" href="#body" class="_back-to-top text-success">Back to top ↑</a>
                     <p class="small text-muted">
                         This website has a parody tone, but the content it actually useful. <br />
                         I made this as a reaction to people asking me what <strong>they</strong> could do that would allow them work remotely.
