@@ -52,7 +52,7 @@ function draw_job_card(el, index) {
     if (!el.dataset.studyresource) el.dataset.studyresource = 'https://www.google.com/search?q=' + encodeURIComponent('How do I become ' + el.dataset.title);
 
     o += '<tr onclick="open_window(event, \''+el.dataset.studyresource+'\');" class="_job _pointer">';
-    o += '    <th class="_name _first text-left" scope="row"><div id="'+id+'" class="_relative"><a onclick="return scroll_to_id(e, \''+id+'\');" href="#'+id+'" class="_anchor">#</a>' + el.dataset.title + '</div></th>';
+    o += '    <th class="_name _first text-left" scope="row"><div id="'+id+'" class="_relative"><a onclick="return scroll_to_id(event, \''+id+'\');" href="#'+id+'" class="_anchor">#</a>' + el.dataset.title + '</div></th>';
     o += '    <td class="_title _second text-left"><div class="_desc _text-gray">' + el.dataset.desc + '</div></td>';
     o += '    <td class="_badge _third text-left"><span title="How fast can you approximately start" class="badge _label-diff ' + el.dataset.difficulty + '">' + el.dataset.difficulty + '</span></td>';
     o += '    <td class="_links _fourth text-right"><a href="' + el.dataset.studyresource + '" target="_blank" rel="nofollow noopener" class="text-success _link">Start <img class="_external" src="assets/img/open-in-new.svg" alt="Continue" /></a></td>';
