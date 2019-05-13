@@ -93,6 +93,9 @@ body._is-scrolled ._menu br { display: none; }
 @media screen and (max-height: 600px) {
     ._menu { bottom: 25px; }
 }
+@media screen and (max-height: 575px) {
+    ._menu { bottom: 0; }
+}
 @media screen and (max-height: 400px) {
     ._btn-help, ._btn-workplacelist, ._menu { display: none; }
 }
