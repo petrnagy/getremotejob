@@ -11,7 +11,7 @@
 ._bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; background-image: url(img/earthv2.jpg); background: linear-gradient(rgba(43,62,80,.8), rgba(43,62,80,.99)), url(img/earthv2.jpg); background-repeat: no-repeat; background-position-x: center; background-size: cover; }
 ._slide { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
 ._text-gray { color: #c1c1c1; }
-body.is-desktop ._job:hover td a._link, body.is-desktop ._job:hover th a._link { pointer-events: none; }
+/* body.is-desktop ._job:hover td a._link, body.is-desktop ._job:hover th a._link { pointer-events: none; } */
 tr._job td ._desc { min-height: 30px; min-width: 200px; }
 ._job ._label-diff.days { background-color: #5cb85c; }
 ._job ._label-diff.weeks { background-color: #5bc0de; }
@@ -33,13 +33,13 @@ body.is-desktop ._btn-outline-white:hover { background-color: gray; }
 ._menu { position: absolute; left: 50%; bottom: 100px; }
 ._back-to-top { position: absolute; right: 0; top: -35px; }
 table ._fourth a:not(:hover) { text-decoration: none; }
-body.is-desktop table ._job:hover ._fourth a { font-size: 125%; }
+/* body.is-desktop table ._job:hover ._fourth a { font-size: 125%; } */
 body.is-desktop table ._job:not(:hover) ._desc { opacity: .5; }
 ._quick-nav { font-weight: bold; }
 table ._first { width: 150px; min-width: 150px; }
 table ._third { width: 100px; min-width: 100px; }
-table ._fourth { width: 100px; min-width: 100px; }
-table ._first, table ._third, table ._fourth { vertical-align: middle; }
+table ._fourth { width: 175px; min-width: 175px; }
+table ._first, table ._second, table ._third, table ._fourth { vertical-align: middle; }
 ._only-floating { display: none; }
 body:not(._is-scrolled) ._only-scrolled { display: none; }
 body._is-scrolled ._menu { background-color: #2B3E50; position: fixed; top: 0; left: 0; right: 0; height: 30px; text-align: center; padding: 5px 20px; z-index: 100; box-shadow: 1px 1px 11px 3px rgba(0,0,0,0.25);  }

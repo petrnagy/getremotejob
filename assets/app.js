@@ -10,7 +10,7 @@ init();
 function init() {
     paint();
     window.addEventListener('load', e => {
-        document.body.classList.add( Browser.isMobileDevice() ? 'is-mobile' : 'is-desktop' );
+        document.body.classList.add(Browser.isMobileDevice() ? 'is-mobile' : 'is-desktop');
     });
 
     var scrollTimer = null;
@@ -19,7 +19,7 @@ function init() {
         scrollTimer = setTimeout(() => {
             let height = window.innerHeight;
             let scrolled = window.pageYOffset;
-            if ( scrolled >= height ) {
+            if (scrolled >= height) {
                 document.body.classList.add('_is-scrolled');
             } else {
                 document.body.classList.remove('_is-scrolled');
@@ -28,7 +28,7 @@ function init() {
     });
 
     let hash = window.location.hash.replace('#', '');
-    if ( hash.length > 1 ) {
+    if (hash.length > 1) {
         setTimeout(() => {
             scroll_to_id(null, hash);
         }, 500);
@@ -45,17 +45,37 @@ function paint() {
 } // end func
 
 function draw_job_card(el, index) {
+    let google = 'https://www.google.com/search?q=' + encodeURIComponent(el.dataset.title.toLowerCase() + ' online course');
+    
+    if (!el.dataset.studyresource) {
+        el.dataset.studyresource = google;
+    } else {
+        if ( 'yes' == el.dataset.google) {
+            el.dataset.studyresource += ';' + google;
+        } // end if
+    } // end if
+    
+
+
     let o = '';
     let id = 'row--' + index;
+    let resources = el.dataset.studyresource.split(';');
+    resources = shuffle(resources);
 
-    if (!el.dataset.desc) el.dataset.desc = 'Nulla feugiat aliquet feugiat.';
-    if (!el.dataset.studyresource) el.dataset.studyresource = 'https://www.google.com/search?q=' + encodeURIComponent('How do I become ' + el.dataset.title);
-
-    o += '<tr onclick="open_window(event, \''+el.dataset.studyresource+'\');" class="_job _pointer">';
-    o += '    <th class="_name _first text-left" scope="row"><div id="'+id+'" class="_relative"><a onclick="return scroll_to_id(event, \''+id+'\');" href="#'+id+'" class="_anchor">#</a>' + el.dataset.title + '</div></th>';
+    o += '<tr class="_job">';
+    o += '    <th class="_name _first text-left" scope="row"><div id="' + id + '" class="_relative"><a onclick="return scroll_to_id(event, \'' + id + '\');" href="#' + id + '" class="_anchor">#</a>' + el.dataset.title + '</div></th>';
     o += '    <td class="_title _second text-left"><div class="_desc _text-gray">' + el.dataset.desc + '</div></td>';
     o += '    <td class="_badge _third text-left"><span title="How fast can you approximately start" class="badge _label-diff ' + el.dataset.difficulty + '">' + el.dataset.difficulty + '</span></td>';
-    o += '    <td class="_links _fourth text-right"><a href="' + el.dataset.studyresource + '" target="_blank" rel="nofollow noopener" class="text-success _link">Start <img class="_external" src="assets/img/open-in-new.svg" alt="Continue" /></a></td>';
+    o += '    <td class="_links _fourth text-right">';
+
+    for (var i = 0; i < resources.length; i++) {
+        let resource = resources[i];
+        let host = extract_hostname(resource);
+        if (resource.length == 0) continue;
+        if (i > 0) o += '<br />';
+        o += '<a href="' + resource + '" rel="nofollow noopener" class="text-success _link">' + host + '<img class="_external" src="assets/img/open-in-new.svg" alt="Continue" /></a>';
+    } // end for
+    o += '    </td>';
     o += '</tr>';
 
     return o;
@@ -103,9 +123,9 @@ function scrollTo(to, duration) {
 
 function is_in_viewport(el) {
     var bounding = el.getBoundingClientRect();
-    if ( bounding.top >= document.body.scrollTop && bounding.top <= (document.body.scrollTop + window.innerHeight) ) {
+    if (bounding.top >= document.body.scrollTop && bounding.top <= (document.body.scrollTop + window.innerHeight)) {
         return true;
-    } else if ( bounding.bottom >= document.body.scrollTop && bounding.bottom <= (document.body.scrollTop + window.innerHeight) ) {
+    } else if (bounding.bottom >= document.body.scrollTop && bounding.bottom <= (document.body.scrollTop + window.innerHeight)) {
         return true;
     } else {
         return false;
@@ -124,9 +144,49 @@ function slugify(text) {
 function open_window(e, link) {
     e = e || window.event;
     let target = e.target || e.srcElement;
-    if ( ! target.classList.contains('_anchor') ) {
+    if (!target.classList.contains('_anchor')) {
         window.open(link, '_blank');
     } // end if
+} // end func
+
+function extract_hostname(url) {
+    var hostname;
+    //find & remove protocol (http, ftp, etc.) and get hostname
+
+    if (url.indexOf("//") > -1) {
+        hostname = url.split('/')[2];
+    }
+    else {
+        hostname = url.split('/')[0];
+    }
+
+    //find & remove port number
+    hostname = hostname.split(':')[0];
+    //find & remove "?"
+    hostname = hostname.split('?')[0];
+
+    hostname = hostname.replace(/^www\./, '');
+
+    return hostname;
+} // end func
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
 } // end func
 
 /**
@@ -138,7 +198,7 @@ Browser = {
     * @static
     * @return Boolean
     */
-    isEdge: function (){
+    isEdge: function () {
         return navigator.userAgent.match(/Edge\/\d./i);
     }, // end method
 
@@ -146,51 +206,51 @@ Browser = {
     * @static
     * @return Boolean
     */
-    isExplorer: function (){
-        return ( navigator.userAgent.indexOf('MSIE') > -1 );
+    isExplorer: function () {
+        return (navigator.userAgent.indexOf('MSIE') > -1);
     }, // end method
 
     /**
     * @static
     * @return Boolean
     */
-    isChrome: function (){
-        var isChrome = ( navigator.userAgent.indexOf('Chrome') > -1 );
-        return ( isChrome && ! Browser.isOpera() );
+    isChrome: function () {
+        var isChrome = (navigator.userAgent.indexOf('Chrome') > -1);
+        return (isChrome && !Browser.isOpera());
     }, // end method
 
     /**
     * @static
     * @return Boolean
     */
-    isSafari: function (){
-        var isSafari = ( navigator.userAgent.indexOf("Safari") > -1 );
-        return ( isSafari && ! Browser.isChrome() && ! Browser.isOpera() );
+    isSafari: function () {
+        var isSafari = (navigator.userAgent.indexOf("Safari") > -1);
+        return (isSafari && !Browser.isChrome() && !Browser.isOpera());
     }, // end method
 
     /**
     * @static
     * @return Boolean
     */
-    isFirefox: function (){
-        return ( navigator.userAgent.indexOf('Firefox') > -1 );
+    isFirefox: function () {
+        return (navigator.userAgent.indexOf('Firefox') > -1);
     }, // end method
 
     /**
     * @static
     * @return Boolean
     */
-    isOpera: function (){
-        return ( navigator.userAgent.toLowerCase().indexOf("opr") > -1 );
+    isOpera: function () {
+        return (navigator.userAgent.toLowerCase().indexOf("opr") > -1);
     }, // end func
 
     /**
     * @static
     * @return Boolean
     */
-    isIos: function() {
-        if ( navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ) {
-            if ( ! Browser.isWindowsPhone() ) {
+    isIos: function () {
+        if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+            if (!Browser.isWindowsPhone()) {
                 return true;
             } // end if
         } // end if
@@ -201,15 +261,15 @@ Browser = {
     * @static
     * @return Boolean
     */
-    isAndroid: function() {
-        return ( navigator.userAgent.toLowerCase().indexOf("android") > -1 && ! Browser.isWindowsPhone() );
+    isAndroid: function () {
+        return (navigator.userAgent.toLowerCase().indexOf("android") > -1 && !Browser.isWindowsPhone());
     }, // end method
 
     /**
     * @static
     * @return Boolean
     */
-    isWindowsPhone: function() {
+    isWindowsPhone: function () {
         return navigator.userAgent.match(/Windows Phone/i);
     }, // end method
 
@@ -217,16 +277,16 @@ Browser = {
     * @static
     * @return Boolean
     */
-    isMobileDevice: function() {
-        return ( Browser.isIos() || Browser.isAndroid() || Browser.isWindowsPhone() );
+    isMobileDevice: function () {
+        return (Browser.isIos() || Browser.isAndroid() || Browser.isWindowsPhone());
     }, // end method
 
     /**
     * @static
     * @return Boolean
     */
-    isDesktopDevice: function() {
-        return ! Browser.isMobileDevice();
+    isDesktopDevice: function () {
+        return !Browser.isMobileDevice();
     }, // end method
 
 };
