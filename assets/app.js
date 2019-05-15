@@ -54,8 +54,6 @@ function draw_job_card(el, index) {
             el.dataset.studyresource += ';' + google;
         } // end if
     } // end if
-    
-
 
     let o = '';
     let id = 'row--' + index;
