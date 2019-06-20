@@ -8,7 +8,7 @@
 ._pointer { cursor: pointer; }
 ._start { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; }
 ._btn-start img { height: 20px; margin-top: -2px; }
-._bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; background-image: url(img/earthv2.jpg); background: linear-gradient(rgba(43,62,80,.8), rgba(43,62,80,.99)), url(img/earthv2.jpg); background-repeat: no-repeat; background-position-x: center; background-size: cover; }
+._bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; background-image: url(img/bgv3.jpg); background: linear-gradient(rgba(43,62,80,.8), rgba(43,62,80,.99)), url(img/bgv3.jpg); background-repeat: no-repeat; background-position-x: center; background-size: cover; }
 ._slide { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
 ._text-gray { color: #c1c1c1; }
 /* body.is-desktop ._job:hover td a._link, body.is-desktop ._job:hover th a._link { pointer-events: none; } */
