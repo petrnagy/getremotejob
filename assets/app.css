@@ -35,13 +35,14 @@ body.is-desktop ._btn-outline-white:hover { background-color: gray; }
 table ._fourth a:not(:hover) { text-decoration: none; }
 /* body.is-desktop table ._job:hover ._fourth a { font-size: 125%; } */
 body.is-desktop table ._job:not(:hover) ._desc { opacity: .5; }
-._quick-nav { font-weight: bold; }
+._quick-nav { font-weight: bold; margin-top: 10px; display: inline-block; }
 table ._first { width: 150px; min-width: 150px; }
 table ._third { width: 100px; min-width: 100px; }
 table ._fourth { width: 175px; min-width: 175px; }
 table ._first, table ._second, table ._third, table ._fourth { vertical-align: middle; }
 ._only-floating { display: none; }
 body:not(._is-scrolled) ._only-scrolled { display: none; }
+body._is-scrolled ._hidden-on-scrolled { display: none; }
 body._is-scrolled ._menu { background-color: #2B3E50; position: fixed; top: 0; left: 0; right: 0; height: 30px; text-align: center; padding: 5px 20px; z-index: 100; box-shadow: 1px 1px 11px 3px rgba(0,0,0,0.25);  }
 body._is-scrolled ._menu ._only-floating { display: initial; }
 body._is-scrolled ._menu ._margin { margin: 0 20px; }
