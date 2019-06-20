@@ -11,13 +11,15 @@
 ._bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; background-image: url(img/bgv3.jpg); background: linear-gradient(rgba(43,62,80,.8), rgba(43,62,80,.99)), url(img/bgv3.jpg); background-repeat: no-repeat; background-position-x: center; background-size: cover; }
 ._slide { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
 ._text-gray { color: #c1c1c1; }
-/* body.is-desktop ._job:hover td a._link, body.is-desktop ._job:hover th a._link { pointer-events: none; } */
+td a._link { padding: 1px 7px; margin: 1px; border: 1px dashed rgba(128, 128, 128, 0.5); float: left; white-space: nowrap; position: relative; }
+td a._link:hover, td a._link:active, td a._link:focus { text-decoration: none; border-color: #3d8b3d; }
+.table-hover tbody tr:hover { background-color: transparent; }
 tr._job td ._desc { min-height: 30px; min-width: 200px; }
 ._job ._label-diff.days { background-color: #5cb85c; }
 ._job ._label-diff.weeks { background-color: #5bc0de; }
 ._job ._label-diff.months { background-color: #DF691A; right: -30px; }
 ._job ._label-diff.years { background-color: #d9534f }
-._job img._external { height: 15px; position: relative; top: -5px; left: 0px; opacity: .75; }
+._job img._external { height: 13px; position: absolute; top: -3px; right: -3px; opacity: 1; }
 ._h2 { margin: 25px 0; padding-left: 10px; }
 ._footer { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; margin-top: 50px; }
 ._anchor { color: rgba(0, 123, 255, 0.33) !important; text-decoration: none !important; }
@@ -33,8 +35,7 @@ body.is-desktop ._btn-outline-white:hover { background-color: gray; }
 ._menu { position: absolute; left: 50%; bottom: 100px; }
 ._back-to-top { position: absolute; right: 0; top: -35px; }
 table ._fourth a:not(:hover) { text-decoration: none; }
-/* body.is-desktop table ._job:hover ._fourth a { font-size: 125%; } */
-body.is-desktop table ._job:not(:hover) ._desc { opacity: .5; }
+body.is-desktop table ._job:not(:hover) ._desc { opacity: .8; }
 ._quick-nav { font-weight: bold; margin-top: 10px; display: inline-block; }
 table ._first { width: 150px; min-width: 150px; }
 table ._third { width: 100px; min-width: 100px; }
