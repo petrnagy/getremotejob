@@ -5,26 +5,22 @@
     More at https://getremotejob.xyz/readme.md
 */
 
-init();
-
 function init() {
+    Burger.init();
     paint();
-    window.addEventListener('load', e => {
-        document.body.classList.add(Browser.isMobileDevice() ? 'is-mobile' : 'is-desktop');
-    });
+    window.addEventListener('load', determine_device);
+    window.addEventListener('resize', determine_device);
+    window.addEventListener('orientationchange', determine_device);
 
-    var scrollTimer = null;
     window.addEventListener('scroll', e => {
-        clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(() => {
-            let height = window.innerHeight;
-            let scrolled = window.pageYOffset;
-            if (scrolled >= height) {
-                document.body.classList.add('_is-scrolled');
-            } else {
-                document.body.classList.remove('_is-scrolled');
-            } // end if
-        }, 25);
+        let height = window.innerHeight;
+        let scrolled = window.pageYOffset;
+        if (scrolled >= height) {
+            document.body.classList.add('_is-scrolled');
+        } else {
+            document.body.classList.remove('_is-scrolled');
+            Burger.close();
+        } // end if
     });
 
     let hash = window.location.hash.replace('#', '');
@@ -85,6 +81,7 @@ function scroll_to_id(e, id) {
     let menuHeight = 70;
     let offset = document.getElementById(id).offsetTop - menuHeight;
     scrollTo(offset, 500);
+    Burger.close();
 
     let loc = window.location.toString().replace(/\#.*$/, '');
     window.history.replaceState({}, document.title, loc + '#' + id);
@@ -289,3 +286,40 @@ Browser = {
     }, // end method
 
 };
+
+Burger = {
+    init: function(){
+        Burger.visibleCls = '_visible';
+        Burger.hiddenCls = '_hidden';
+        Burger.burger = document.getElementById('burger');
+        Burger.menu = document.getElementById('menu');
+    },
+    toggle: function(){
+        if ( Burger.menu.classList.contains(Burger.visibleCls) ) {
+            Burger.close();
+        } else {
+            Burger.open();
+        } // end if-else
+    },
+    open: function(){
+        Burger.menu.classList.add(Burger.visibleCls);
+        Burger.burger.classList.add(Burger.hiddenCls);
+    },
+    close: function(){
+        Burger.menu.classList.remove(Burger.visibleCls);
+        Burger.burger.classList.remove(Burger.hiddenCls);
+    }
+}
+
+function determine_device() {
+    const MOBILE_LIMIT = 991;
+    if ( Browser.isMobileDevice() || window.innerWidth <= MOBILE_LIMIT ) {
+        document.body.classList.add('is-mobile');
+        document.body.classList.remove('is-desktop');
+    } else {
+        document.body.classList.add('is-desktop');
+        document.body.classList.remove('is-mobile');
+    } // end if-else
+}
+
+init();

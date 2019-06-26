@@ -5,6 +5,9 @@
     More at https://getremotejob.xyz/readme.md
 */
 
+._hidden,
+body.is-mobile ._only-desktop,
+body.is-desktop ._only-mobile { display: none !important; }
 ._pointer { cursor: pointer; }
 ._start { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; }
 ._btn-start img { height: 20px; margin-top: -2px; }
@@ -46,13 +49,29 @@ table ._first, table ._second, table ._third, table ._fourth { vertical-align: m
 ._only-floating { display: none; }
 body:not(._is-scrolled) ._only-scrolled { display: none; }
 body._is-scrolled ._hidden-on-scrolled { display: none; }
-body._is-scrolled ._menu { background-color: #2B3E50; position: fixed; top: 0; left: 0; right: 0; height: 30px; text-align: center; padding: 5px 20px; z-index: 100; box-shadow: 1px 1px 11px 3px rgba(0,0,0,0.25);  }
-body._is-scrolled ._menu ._only-floating { display: initial; }
-body._is-scrolled ._menu ._margin { margin: 0 20px; }
-body._is-scrolled ._menu .hidden-md-up,
-body._is-scrolled ._menu ._quick-nav-0,
-body._is-scrolled ._menu ._quick-nav-1,
-body._is-scrolled ._menu br { display: none; }
+
+body.is-desktop._is-scrolled ._menu { background-color: #2B3E50; position: fixed; top: 0; left: 0; right: 0; height: 30px; text-align: center; padding: 5px 20px; z-index: 100; box-shadow: 1px 1px 11px 3px rgba(0,0,0,0.25);  }
+body.is-desktop._is-scrolled ._menu ._only-floating { display: initial; }
+body.is-desktop._is-scrolled ._menu ._margin { margin: 0 20px; }
+body.is-desktop._is-scrolled ._menu ._margin-right { margin-right: 20px; }
+body.is-desktop._is-scrolled ._menu .hidden-md-up,
+body.is-desktop._is-scrolled ._menu ._quick-nav-0,
+body.is-desktop._is-scrolled ._menu ._quick-nav-1,
+body.is-desktop._is-scrolled ._menu br { display: none; }
+
+body.is-mobile._is-scrolled ._menu:not(._visible) { display: none; }
+body.is-mobile._is-scrolled ._menu { background-color: rgba(43,62,80,1); position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 10; padding: 25px;  display: flex; align-items: center; justify-content: center; }
+body.is-mobile._is-scrolled ._menu a { display: block; font-size: 20px; padding: 5px 0; }
+body.is-mobile._is-scrolled ._menu br { display: none; }
+body.is-mobile ._burger { z-index: 25; position: fixed; top: 0; left: 0; right: 0; height: 50px; background-color: rgba(43,62,80,.95); } 
+body.is-mobile ._burger ._toggle, 
+body.is-mobile ._menu ._close { width: 50px; height: 50px; padding: 5px !important; }
+body.is-mobile ._burger ._toggle img, 
+body.is-mobile ._menu ._close img { width: 40px; height: 40px; }
+body.is-mobile ._burger ._toggle:hover, 
+body.is-mobile ._menu ._close:hover { filter: brightness(125%); }
+body.is-mobile ._burger ._toggle { position: fixed; right: 0; top: 0; }
+body.is-mobile ._menu ._close { position: fixed; right: 0; top: 0; }
 
 ._engineering { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/code-1839406_1920--w1044.jpg);  }
 ._marketing { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/laptop-charts-and-graphs--w1044.jpg); }
@@ -66,22 +85,12 @@ body._is-scrolled ._menu br { display: none; }
 ._section { background-repeat: no-repeat; background-position-x: center; background-size: cover; }
 
 @media screen and (max-width: 768px) {
-    ._menu { left: 0; right: 0; bottom: 50px; text-align: center; }
     ._slide ._header { padding: 20px; }
     ._quick-nav-0, ._quick-nav-1 { display: none; }
     .card-link+.card-link { margin-left: 0; }
     ._container { max-width: 100%; }
 }
 @media screen and (max-width: 640px) {
-    ._menu { bottom: 0px; }
-    ._menu hr { display: none; }
-    ._menu ._margin { margin: 0; display: inline; }
-
-    body._is-scrolled ._menu { height: 48px; }
-    body._is-scrolled ._menu ._margin { display: inline; }
-    body._is-scrolled ._menu { font-size: 18px; padding: 13px 20px; white-space: nowrap; overflow-x: scroll; }
-    
-    body.is-mobile._is-scrolled ._menu { box-shadow: 1px 1px 11px 3px rgba(0,0,0,0.25), inset -10px 0px 11px -8px rgba(92,184,92,.5);  }
     body.is-mobile ._table-responsive {
         background: radial-gradient(farthest-side at 100% 50%, rgba(92,184,92,.5), rgba(92,184,92,0)) 100% 0;
         background-repeat: no-repeat;
@@ -95,14 +104,8 @@ body._is-scrolled ._menu br { display: none; }
     ._btn-help { left: 10px; right: initial; }
     ._second { font-size: 10px; opacity: .75; }
 }
-@media screen and (max-height: 600px) {
-    ._menu { bottom: 25px; }
-}
-@media screen and (max-height: 575px) {
-    ._menu { bottom: 0; }
-}
 @media screen and (max-height: 400px) {
-    ._btn-help, ._btn-workplacelist, ._menu { display: none; }
+    ._btn-help, ._btn-workplacelist { display: none; }
 }
 
 /* <Made by ME widget> */

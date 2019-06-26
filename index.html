@@ -103,25 +103,30 @@
         <a target="_blank" rel="noopener" href="https://workplacelist.co" class="btn _btn-outline-white _btn-workplacelist">
             Already got remote job?
         </a>
-        <nav class="_menu">
+        <nav class="_menu" id="menu">
             <div class="small _thin">
                 <span class="_quick-nav-0">„I know something“</span><br />
-                <a onclick="return scroll_to_id(event, 'job-boards');" class="text-success" href="#job-boards"><strong>Remote job boards</strong></a> <span class="_hidden-on-scrolled">·</span>
-                <a onclick="return scroll_to_id(event, 'communities');" class="text-success _margin" href="#communities"><strong>Communities</strong></a><br />
+                <a onclick="return scroll_to_id(event, 'job-boards');" class="text-success" href="#job-boards"><strong>Remote job boards</strong></a> <span class="_only-desktop">·</span>
+                <a onclick="return scroll_to_id(event, 'communities');" class="text-success" href="#communities"><strong>Communities</strong></a> <span class="_only-desktop">·</span>
+                <a onclick="return scroll_to_id(event, 'follow');" class="text-success _margin-right" href="#follow"><strong>Who to follow?</strong></a><br />
                 <div class="hidden-md-up"></div>
                 <span class="_quick-nav-1">„Don't know anything but want to learn“</span><br />
-                <a onclick="return scroll_to_id(event, 'engineering');" class="text-success" href="#engineering">#engineering</a> ·
-                <a onclick="return scroll_to_id(event, 'marketing');" class="text-success" href="#marketing">#marketing</a> ·
-                <a onclick="return scroll_to_id(event, 'design');" class="text-success" href="#design">#design</a> ·
-                <a onclick="return scroll_to_id(event, 'deskjob');" class="text-success" href="#deskjob">#deskjob</a> <span class="_only-floating">·</span>
+                <a onclick="return scroll_to_id(event, 'engineering');" class="text-success" href="#engineering">#engineering</a> <span class="_only-desktop">·</span>
+                <a onclick="return scroll_to_id(event, 'marketing');" class="text-success" href="#marketing">#marketing</a> <span class="_only-desktop">·</span>
+                <a onclick="return scroll_to_id(event, 'design');" class="text-success" href="#design">#design</a> <span class="_only-desktop">·</span>
+                <a onclick="return scroll_to_id(event, 'deskjob');" class="text-success" href="#deskjob">#deskjob</a> <span class="_only-desktop">·</span>
                 <div class="hidden-md-up"></div>
-                <a onclick="return scroll_to_id(event, 'consulting');" class="text-success" href="#consulting">#consulting</a> ·
-                <a onclick="return scroll_to_id(event, 'entrepreneurship');" class="text-success" href="#entrepreneurship">#entrepreneurship</a> ·
+                <a onclick="return scroll_to_id(event, 'consulting');" class="text-success" href="#consulting">#consulting</a> <span class="_only-desktop">·</span>
+                <a onclick="return scroll_to_id(event, 'entrepreneurship');" class="text-success" href="#entrepreneurship">#entrepreneurship</a> <span class="_only-desktop">·</span>
                 <a onclick="return scroll_to_id(event, 'other');" class="text-success" href="#other">#other</a>
 
-                <span class="_only-scrolled">·<b><a onclick="return scroll_to_id(event, 'body');" class="text-success" href="#body">↑top</a></b></span>
+                <span class="_only-scrolled"><span class="_only-desktop">·</span> <b><a onclick="return scroll_to_id(event, 'body');" class="text-success" href="#body">top↑</a></b></span>
             </div>
+            <a class="_only-scrolled _only-mobile _close" href="#" onclick="Burger.toggle(); return false;"><img src="assets/img/close.svg" alt="Close menu" /></a>
         </nav>
+        <div class="_only-scrolled _burger" id="burger">
+            <a class="_toggle" href="" onclick="Burger.toggle(); return false;"><img src="assets/img/menu.svg" alt="Toggle menu" /></a>
+        </div>
     </header>
     <section id="start" class="_start">
         <div class="container _container">
@@ -281,6 +286,42 @@
                         <tr class="_job-pls" data-title="r/Beermoney (US)" data-desc="/r/Beermoney is a community for people to discuss mostly online money-making opportunities (except for posts by free food guy). You shouldn't expect to make a living, but it is possible to make extra cash on the side for your habits/needs." data-difficulty="" data-studyresource="https://www.reddit.com/r/beermoney">
                         </tr>
                         <tr class="_job-pls" data-title="r/beermoneyglobal" data-desc=" In this subreddit we want to gather and focus on all the websites/programs/opportunities that exist for the non-us citizens of this world!" data-difficulty="" data-studyresource="https://www.reddit.com/r/beermoneyglobal">
+                        </tr>
+                    </table>
+                </div>
+            </article>
+
+            <article>
+                <div class="row _follow _section">
+                    <h2 id="follow" class="h2 col-lg-12 _h2">Who to follow? <a onclick="return scroll_to_id(event, 'follow');" href="#follow" class="_anchor">#</a></h2>
+                </div>
+                <div class="row">
+                    <table class="table table-hover table-responsive-md _table-responsive">
+                        <tr class="_job-pls" data-title="@Jobspresso" data-studyresource="https://twitter.com/Jobspresso" data-desc="The easiest way to find remote jobs in tech, marketing, customer service & more. Post a Job: (link: https://jobspresso.co/hire-remote-workers/)">
+                        </tr>
+                        <tr class="_job-pls" data-title="@fullstackjob" data-studyresource="https://twitter.com/fullstackjob" data-desc="#fullstack #jobs #frontend #backend #devop #developerjobs #remotejob #remotework #TogetherWeMake @golangch">
+                        </tr>
+                        <tr class="_job-pls" data-title="@remotiveio" data-studyresource="https://twitter.com/remotiveio" data-desc="Helping Tech professionals land remote jobs since 2014. #productivity & #remotework 💼🏠🤗">
+                        </tr>
+                        <tr class="_job-pls" data-title="@wfhio" data-studyresource="https://twitter.com/wfhio" data-desc="Digital and tech remote jobs: Customer Support, Design, DevOps, Marketing, Network/Security, Quality Assurance, Software Development, System Administration.">
+                        </tr>
+                        <tr class="_job-pls" data-title="@flexjobs" data-studyresource="https://twitter.com/flexjobs" data-desc="FlexJobs hand-screens thousands of #remotejobs to bring you the largest, current listing of legitimate and professional, scam-free work-at-home opportunities.">
+                        </tr>
+                        <tr class="_job-pls" data-title="@RemotelyAweJobs" data-studyresource="https://twitter.com/RemotelyAweJobs" data-desc="Scouring the web for the most awesome #remote #technology #jobs. Post a job ad for free or sign up for email alerts w/ remote job posts. Created by @mdesjardins">
+                        </tr>
+                        <tr class="_job-pls" data-title="@remoteleaf" data-studyresource="https://twitter.com/remoteleaf" data-desc="Hand-curated remote jobs delivered to your inbox! 👉 🌎">
+                        </tr>
+                        <tr class="_job-pls" data-title="@remoteyear" data-studyresource="https://twitter.com/remoteyear" data-desc="Remote Year provides a foundation for professionals to work and explore the world as part of a vibrant global community. Get started:">
+                        </tr>
+                        <tr class="_job-pls" data-title="@RemoteAge" data-studyresource="https://twitter.com/RemoteAge" data-desc="Apply for #remotejobs. Upload your Resume. Get found. Daily #remotework sweetness right here on Twitter. Swing by our Blog page (link: https://bit.ly/2DArTIq)">
+                        </tr>
+                        <tr class="_job-pls" data-title="@WorkUncaged" data-studyresource="https://twitter.com/WorkUncaged" data-desc="Getting the most out of #remotework. @opennomad working toward #locationindependence and becoming a #DigitalNomad">
+                        </tr>
+                        <tr class="_job-pls" data-title="@remote_co" data-studyresource="https://twitter.com/remote_co" data-desc="Your remote work resource. We tweet about starting, growing & managing remote teams. #RemoteWork">
+                        </tr>
+                        <tr class="_job-pls" data-title="@codrops" data-studyresource="https://twitter.com/codrops" data-desc="Codrops is dedicated to provide useful tutorials, insightful articles, creative inspiration and free resources for web designers and developers.">
+                        </tr>
+                        <tr class="_job-pls" data-title="@GitHubJobs" data-studyresource="https://twitter.com/GitHubJobs" data-desc="Find the job you want.">
                         </tr>
                     </table>
                 </div>
