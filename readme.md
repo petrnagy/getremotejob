@@ -1,19 +1,19 @@
-# Get a Fucking Remote Job
+# Get a Remote Job
 
-This website has a *parody* tone, but the content it actually **useful**.
 I made this as a reaction to people asking me what **they** could do that would allow them work remotely.
 
 ## To-do
-- ⚙️ Add labels to every row
-- ⚙️ Implement filtering
-- ⚙️ Implement fulltext search
+- ✅ Keep adding the goodies
+- ⚙️ Add more resources to jobs with just Google query
+- ⚙️ Implement search / filter
 
 ## Done
 - ✅ Grab a template
 - ✅ Make MVP
 - ✅ Get a domain name
 - ✅ Deploy the website
-- 🚀 Launch the website
+- ✅ Launch the website
+- ✅ Add labels when appropriate
 
 ### Links & stuff
 
