@@ -4,4 +4,4 @@ Disallow:
 User-Agent: *
 Disallow: 
 
-sitemap: https://getafuckingremotejob.xyz/sitemap.xml
+sitemap: https://getremotejob.xyz/sitemap.xml
