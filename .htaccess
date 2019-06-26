@@ -1,1 +1,1 @@
-RedirectMatch 302 ^/spreadsheet/?$ https://docs.google.com/spreadsheets/d/1YsUs4mkNg_P27LilP2nmo--f_gIhaWHqVShZS1OqjXA/edit?usp=sharing
+RedirectMatch 302 ^/spreadsheet/?$ https://github.com/petrnagy/getremotejob
