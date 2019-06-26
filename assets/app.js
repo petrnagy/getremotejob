@@ -59,11 +59,12 @@ function draw_job_card(el, index) {
     let id = 'row--' + index;
     let resources = el.dataset.studyresource.split(';');
     resources = shuffle(resources);
+    let difficulty = el.dataset.difficulty ? el.dataset.difficulty : '';
 
     o += '<tr class="_job">';
     o += '    <th class="_name _first text-left" scope="row"><div id="' + id + '" class="_relative"><a onclick="return scroll_to_id(event, \'' + id + '\');" href="#' + id + '" class="_anchor">#</a>' + el.dataset.title + '</div></th>';
     o += '    <td class="_title _second text-left"><div class="_desc _text-gray">' + el.dataset.desc + '</div></td>';
-    o += '    <td class="_badge _third text-left"><span title="How fast can you approximately start" class="badge _label-diff ' + el.dataset.difficulty + '">' + el.dataset.difficulty + '</span></td>';
+    o += '    <td class="_badge _third text-left"><span title="How fast can you approximately start" class="badge _label-diff ' + difficulty + '">' + difficulty + '</span></td>';
     o += '    <td class="_links _fourth text-right">';
 
     for (var i = 0; i < resources.length; i++) {
