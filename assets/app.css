@@ -20,6 +20,7 @@ tr._job td ._desc { min-height: 30px; min-width: 200px; }
 ._job ._label-diff.months { background-color: #DF691A; right: -30px; }
 ._job ._label-diff.years { background-color: #d9534f }
 ._job img._external { height: 13px; position: absolute; top: -3px; right: -3px; opacity: 1; }
+td._links { padding-left: 0; padding-right: 0; }
 ._h2 { margin: 25px 0; padding-left: 10px; }
 ._footer { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; margin-top: 50px; }
 ._anchor { color: rgba(0, 123, 255, 0.33) !important; text-decoration: none !important; }
@@ -36,7 +37,8 @@ body.is-desktop ._btn-outline-white:hover { background-color: gray; }
 ._back-to-top { position: absolute; right: 0; top: -35px; }
 table ._fourth a:not(:hover) { text-decoration: none; }
 body.is-desktop table ._job:not(:hover) ._desc { opacity: .8; }
-._quick-nav { font-weight: bold; margin-top: 10px; display: inline-block; }
+._quick-nav-0 { font-weight: bold; display: inline-block; }
+._quick-nav-1 { font-weight: bold; margin-top: 10px; display: inline-block; }
 table ._first { width: 150px; min-width: 150px; }
 table ._third { width: 100px; min-width: 100px; }
 table ._fourth { width: 175px; min-width: 175px; }
@@ -48,7 +50,8 @@ body._is-scrolled ._menu { background-color: #2B3E50; position: fixed; top: 0; l
 body._is-scrolled ._menu ._only-floating { display: initial; }
 body._is-scrolled ._menu ._margin { margin: 0 20px; }
 body._is-scrolled ._menu .hidden-md-up,
-body._is-scrolled ._menu ._quick-nav,
+body._is-scrolled ._menu ._quick-nav-0,
+body._is-scrolled ._menu ._quick-nav-1,
 body._is-scrolled ._menu br { display: none; }
 
 ._engineering { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/code-1839406_1920--w1044.jpg);  }
@@ -57,15 +60,15 @@ body._is-scrolled ._menu br { display: none; }
 ._deskjob { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/content-creator--w1044.jpg); }
 ._consulting { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/english-teacher--w1044.jpg); }
 ._entrepreneurship { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/product-designer--w1044.jpg); }
-._jobboards { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/stock-videographer--w1044.jpg); }
+._jobboards { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/3d-artist-animator--w1044.jpg); }
 ._communities { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/social-media-curator--w1044.jpg); }
-._other { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/3d-artist-animator--w1044.jpg); }
+._other { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/stock-videographer--w1044.jpg); }
 ._section { background-repeat: no-repeat; background-position-x: center; background-size: cover; }
 
 @media screen and (max-width: 768px) {
     ._menu { left: 0; right: 0; bottom: 50px; text-align: center; }
     ._slide ._header { padding: 20px; }
-    ._quick-nav { display: none; }
+    ._quick-nav-0, ._quick-nav-1 { display: none; }
     .card-link+.card-link { margin-left: 0; }
     ._container { max-width: 100%; }
 }

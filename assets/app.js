@@ -71,7 +71,7 @@ function draw_job_card(el, index) {
         let host = extract_hostname(resource);
         if (resource.length == 0) continue;
         // if (i > 0) o += '<br />';
-        o += '<a href="' + resource + '" rel="nofollow noopener" class="text-success _link">' + host + '<img class="_external" src="assets/img/open-in-new.svg" alt="Continue" /></a>';
+        o += '<a href="' + resource + '" rel="nofollow noopener" class="text-success _link col-xs-6">' + host + '<img class="_external" src="assets/img/open-in-new.svg" alt="Continue" /></a>';
     } // end for
     o += '    </td>';
     o += '</tr>';
