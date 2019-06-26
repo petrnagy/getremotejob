@@ -20,5 +20,5 @@ I made this as a reaction to people asking me what **they** could do that would 
 - Address: https://getremotejob.xyz
 - Author: https://twitter.com/petrnagy
 - License: https://getremotejob.xyz/LICENSE.txt
-- Contribute: https://docs.google.com/spreadsheets/d/1YsUs4mkNg_P27LilP2nmo--f_gIhaWHqVShZS1OqjXA/edit?usp=sharing
+- Contribute: https://github.com/petrnagy/getremotejob (plz send pull requests thx)
 - Repository: https://github.com/petrnagy/getremotejob
