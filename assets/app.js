@@ -5,10 +5,12 @@
     More at https://getremotejob.xyz/readme.md
 */
 
+window.addEventListener('load', init);
+
 function init() {
     Burger.init();
     paint();
-    window.addEventListener('load', determine_device);
+    determine_device();
     window.addEventListener('resize', determine_device);
     window.addEventListener('orientationchange', determine_device);
 
@@ -321,5 +323,3 @@ function determine_device() {
         document.body.classList.remove('is-mobile');
     } // end if-else
 }
-
-init();

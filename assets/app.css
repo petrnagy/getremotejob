@@ -104,6 +104,9 @@ body.is-mobile ._menu ._close { position: fixed; right: 0; top: 0; }
     ._btn-help { left: 10px; right: initial; }
     ._second { font-size: 10px; opacity: .75; }
 }
+@media screen and (max-height: 550px) {
+    body.is-mobile._is-scrolled ._menu { display: block; overflow-y: scroll; }
+}
 @media screen and (max-height: 400px) {
     ._btn-help, ._btn-workplacelist { display: none; }
 }
