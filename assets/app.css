@@ -107,6 +107,8 @@ body.is-mobile ._menu ._close { position: fixed; right: 0; top: 0; }
     ._second { font-size: 10px; opacity: .75; }
 }
 @media screen and (max-height: 550px) {
+    body.is-mobile:not(._is-scrolled) ._third { display: none; }
+    /* body.is-mobile:not(._is-scrolled) ._menu { display: none; } */
     body.is-mobile._is-scrolled ._menu { display: block; overflow-y: scroll; }
 }
 @media screen and (max-height: 400px) {
