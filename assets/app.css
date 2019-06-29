@@ -7,7 +7,7 @@
 
 ._hidden,
 body.is-mobile ._only-desktop,
-body.is-desktop ._only-mobile { display: none !important; }
+body.is-desktop ._only-mobile { display: none; }
 ._pointer { cursor: pointer; }
 ._start { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; }
 ._btn-start img { height: 20px; margin-top: -2px; }
@@ -89,6 +89,8 @@ body.is-mobile ._menu ._close { position: fixed; right: 0; top: 0; }
     ._quick-nav-0, ._quick-nav-1 { display: none; }
     .card-link+.card-link { margin-left: 0; }
     ._container { max-width: 100%; }
+    body.is-mobile:not(._is-scrolled) ._menu { left: 0; right: 0; bottom: 10px; text-align: center; }
+    body.is-mobile:not(._is-scrolled) ._only-desktop { display: initial; }
 }
 @media screen and (max-width: 640px) {
     body.is-mobile ._table-responsive {
