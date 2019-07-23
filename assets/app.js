@@ -17,7 +17,7 @@ function init() {
     window.addEventListener('scroll', e => {
         let height = window.innerHeight;
         let scrolled = window.pageYOffset;
-        if (scrolled >= height) {
+        if (scrolled >= height * 2) {
             document.body.classList.add('_is-scrolled');
         } else {
             document.body.classList.remove('_is-scrolled');
@@ -78,9 +78,9 @@ function draw_job_card(el, index) {
     return o;
 } // end func
 
-function scroll_to_id(e, id) {
+function scroll_to_id(e, id, ignoreOffset = false) {
     if (e && e.preventDefault) e.preventDefault();
-    let menuHeight = 70;
+    let menuHeight = ignoreOffset ? 0 : 70;
     let offset = document.getElementById(id).offsetTop - menuHeight;
     scrollTo(offset, 500);
     Burger.close();

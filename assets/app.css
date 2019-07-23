@@ -9,10 +9,12 @@
 body.is-mobile ._only-desktop,
 body.is-desktop ._only-mobile { display: none; }
 ._pointer { cursor: pointer; }
-._start { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; }
+._start {  padding-top: 50px; }
 ._btn-start img { height: 20px; margin-top: -2px; }
 ._bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; background-image: url(img/bgv3.jpg); background: linear-gradient(rgba(43,62,80,.8), rgba(43,62,80,.99)), url(img/bgv3.jpg); background-repeat: no-repeat; background-position-x: center; background-size: cover; }
-._slide { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+._slide { border-bottom: 1px solid rgba(255,255,255,.25); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+._list { font-weight: 100; }
+._list a { display: block; line-height: 1.7; }
 ._text-gray { color: #c1c1c1; }
 td a._link { padding: 1px 7px; margin: 1px; border: 1px dashed rgba(128, 128, 128, 0.5); float: left; white-space: nowrap; position: relative; }
 td a._link:hover, td a._link:active, td a._link:focus { text-decoration: none; border-color: #3d8b3d; }
@@ -59,6 +61,7 @@ body.is-desktop._is-scrolled ._menu ._quick-nav-0,
 body.is-desktop._is-scrolled ._menu ._quick-nav-1,
 body.is-desktop._is-scrolled ._menu br { display: none; }
 
+body:not(._is-scrolled) ._menu { display: none; }
 body.is-mobile._is-scrolled ._menu:not(._visible) { display: none; }
 body.is-mobile._is-scrolled ._menu { background-color: rgba(43,62,80,1); position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 10; padding: 25px;  display: flex; align-items: center; justify-content: center; }
 body.is-mobile._is-scrolled ._menu a { display: block; font-size: 20px; padding: 5px 0; }
@@ -84,7 +87,15 @@ body.is-mobile ._menu ._close { position: fixed; right: 0; top: 0; }
 ._other { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/stock-videographer--w1044.jpg); }
 ._section { background-repeat: no-repeat; background-position-x: center; background-size: cover; }
 
+@media screen and (min-width: 769px) {
+    ._list a:before { content: "≫"; width: 14px; display: inline-block; }
+    ._option { width: 384px; }
+}
 @media screen and (max-width: 768px) {
+    ._list a { text-align: center; }
+    ._option:last-of-type { margin-top: 25px; }
+    ._option { padding: 0; }
+    #crossroad .row { margin: 0; }
     ._slide ._header { padding: 20px; }
     ._quick-nav-0, ._quick-nav-1 { display: none; }
     .card-link+.card-link { margin-left: 0; }
@@ -96,7 +107,7 @@ body.is-mobile ._menu ._close { position: fixed; right: 0; top: 0; }
     body.is-mobile ._table-responsive {
         background: radial-gradient(farthest-side at 100% 50%, rgba(92,184,92,.5), rgba(92,184,92,0)) 100% 0;
         background-repeat: no-repeat;
-        background-size: 5px 100%;
+        background-size: 20px 100%;
     }
 }
 @media screen and (max-width: 450px) {
@@ -106,9 +117,9 @@ body.is-mobile ._menu ._close { position: fixed; right: 0; top: 0; }
     ._btn-help { left: 10px; right: initial; }
     ._second { font-size: 10px; opacity: .75; }
 }
-@media screen and (max-height: 666px) {
+/* @media screen and (max-height: 666px) {
     body.is-mobile:not(._is-scrolled) ._third { display: none; }
-}
+} */
 @media screen and (max-height: 550px) {
     /* body.is-mobile:not(._is-scrolled) ._menu { display: none; } */
     body.is-mobile._is-scrolled ._menu { display: block; overflow-y: scroll; }
