@@ -13,12 +13,14 @@ body.is-desktop ._only-mobile { display: none; }
 ._btn-start img { height: 20px; margin-top: -2px; }
 ._bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; background-image: url(img/bgv3.jpg); background: linear-gradient(rgba(43,62,80,.8), rgba(43,62,80,.99)), url(img/bgv3.jpg); background-repeat: no-repeat; background-position-x: center; background-size: cover; }
 ._slide { border-bottom: 1px solid rgba(255,255,255,.25); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-._list { font-weight: 100; }
+._list { font-weight: 400; }
 ._list a { display: block; line-height: 1.7; }
 ._text-gray { color: #c1c1c1; }
 td a._link { padding: 1px 7px; margin: 1px; border: 1px dashed rgba(128, 128, 128, 0.5); float: left; white-space: nowrap; position: relative; }
 td a._link:hover, td a._link:active, td a._link:focus { text-decoration: none; border-color: #3d8b3d; }
 .table-hover tbody tr:hover { background-color: transparent; }
+tr._job { border-left: 5px solid transparent; }
+tr._job:hover { border-left-color: #5cb85c; }
 tr._job td ._desc { min-height: 30px; min-width: 200px; }
 ._job ._label-diff.days { background-color: #5cb85c; }
 ._job ._label-diff.weeks { background-color: #5bc0de; }
@@ -26,9 +28,9 @@ tr._job td ._desc { min-height: 30px; min-width: 200px; }
 ._job ._label-diff.years { background-color: #d9534f }
 ._job img._external { height: 13px; position: absolute; top: -3px; right: -3px; opacity: 1; }
 td._links { padding-left: 0; padding-right: 0; }
-._h2 { margin: 25px 0; padding-left: 10px; }
+._h2 { margin: 5px 0; padding-left: 10px; }
 ._footer { border-top: 1px solid rgba(255,255,255,.25); padding-top: 50px; margin-top: 50px; }
-._anchor { color: rgba(0, 123, 255, 0.33) !important; text-decoration: none !important; }
+._anchor { color: rgba(0, 123, 255, 1) !important; text-decoration: none !important; }
 body.is-desktop ._anchor:hover { filter: brightness(150%); text-decoration: none; }
 th ._anchor { position: absolute; left: -10px; }
 ._thin { font-weight: 300 !important; }
@@ -41,7 +43,7 @@ body.is-desktop ._btn-outline-white:hover { background-color: gray; }
 ._menu { position: absolute; left: 50%; bottom: 100px; }
 ._back-to-top { position: absolute; right: 0; top: -35px; }
 table ._fourth a:not(:hover) { text-decoration: none; }
-body.is-desktop table ._job:not(:hover) ._desc { opacity: .8; }
+/* body.is-desktop table ._job:not(:hover) ._desc { opacity: .8; } */
 ._quick-nav-0 { font-weight: bold; display: inline-block; }
 ._quick-nav-1 { font-weight: bold; margin-top: 10px; display: inline-block; }
 table ._first { width: 150px; min-width: 150px; }
@@ -85,7 +87,7 @@ body.is-mobile ._menu ._close { position: fixed; right: 0; top: 0; }
 ._jobboards { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/3d-artist-animator--w1044.jpg); }
 ._communities { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/social-media-curator--w1044.jpg); }
 ._other { background: linear-gradient(rgba(43,62,80,.7), rgba(43,62,80,.7)), url(img/jobs/w1044/stock-videographer--w1044.jpg); }
-._section { background-repeat: no-repeat; background-position-x: center; background-size: cover; }
+._section { background-repeat: no-repeat; background-position-x: center; background-size: cover; border-left: 5px solid #5cb85c; }
 
 @media screen and (min-width: 769px) {
     ._list a:before { content: "≫"; width: 14px; display: inline-block; }
