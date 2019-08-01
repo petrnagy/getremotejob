@@ -107,6 +107,7 @@
             <div class="small _thin">
                 <span class="_quick-nav-0">„I am looking for a job“</span><br />
                 <a onclick="return scroll_to_id(event, 'job-boards');" class="text-success" href="#job-boards"><strong>Remote job boards</strong></a> <span class="_only-desktop">·</span>
+                <a onclick="return scroll_to_id(event, 'marketplaces');" class="text-success" href="#marketplaces"><strong>Marketplaces</strong></a> <span class="_only-desktop">·</span>
                 <a onclick="return scroll_to_id(event, 'communities');" class="text-success" href="#communities"><strong>Communities</strong></a> <span class="_only-desktop">·</span>
                 <a onclick="return scroll_to_id(event, 'follow');" class="text-success _margin-right" href="#follow"><strong>Who to follow?</strong></a><br />
                 <div class="hidden-md-up"></div>
@@ -138,6 +139,7 @@
                     </p>
                     <div class="_list">
                         <a onclick="return scroll_to_id(event, 'job-boards');" class="text-success" href="#job-boards">Remote job boards</a>
+                        <a onclick="return scroll_to_id(event, 'marketplaces');" class="text-success" href="#marketplaces">Marketplaces</a>
                         <a onclick="return scroll_to_id(event, 'communities');" class="text-success" href="#communities">Communities</a>
                         <a onclick="return scroll_to_id(event, 'follow');" class="text-success _margin-right" href="#follow">Who to follow?</a>
                     </div>
@@ -307,15 +309,10 @@
                         </tr>
                         <tr class="_job-pls" data-title="GetRemoteJob" data-studyresource="https://getremotejob.com" data-desc="Only highest quality job listings. All listings are free to post and reviewed by a human before going live.">
                         </tr>
-
                         <tr class="_job-pls" data-title="Mike's Remote List" data-studyresource="https://www.mikesremotelist.com/" data-desc="A list of remote jobs">
                         </tr>
                         <tr class="_job-pls" data-title="Tech Companies Hiring Remotely" data-studyresource="https://www.hiringremote.ly/" data-desc="All* the filters you need to find a remote company that’s right for you.">
                         </tr>
-                        <!--
-                        <tr class="_job-pls" data-title="" data-studyresource="https://underwearworker.com/" data-desc="">
-                        </tr>
-                        -->
                         <tr class="_job-pls" data-title="Remote Path" data-studyresource="https://remotepath.io/" data-desc="Begin your path to working from anywhere with our database of the best companies and careers for remote work. Filter by the things that are important to you and easily discover the next step of your remote career.">
                         </tr>
                         <tr class="_job-pls" data-title="RMTWRK" data-studyresource="https://rmtwrk.com/" data-desc="RMTWRK helps people find remote jobs and helps companies that hire remotely to find great people.">
@@ -326,35 +323,62 @@
                         </tr>
                         <tr class="_job-pls" data-title="Tech Jobs for Good" data-studyresource="https://www.techjobsforgood.com/?search=remote" data-desc="We help you find tech jobs at mission-driven companies in the United States.">
                         </tr>
-                        <!--
-                        <tr class="_job-pls" data-title="" data-studyresource="http://indiremote.com/" data-desc="">
-                        </tr>
-                        -->
                         <tr class="_job-pls" data-title="Best Remote Job" data-studyresource="https://bestremotejob.com/" data-desc="Find your best remote or freelance job here, related python, django, flask, golang, c++, javascript, angularjs, vuejs, reactjs, reactnative, mobile, frontend, backend, fullstack">
                         </tr>
                         <tr class="_job-pls" data-title="PERIODIX" data-studyresource="https://periodix.tk/" data-desc="Tired of looking through hundreds of freelance jobs? Get Periodix. Artificial Intelligence finds you freelance jobs with the greatest chances to be hired.">
                         </tr>
-                        <!--
-                        <tr class="_job-pls" data-title="RemotePenguin" data-studyresource="https://www.remotepenguin.com/" data-desc="">
-                        </tr>
-                        -->
                         <tr class="_job-pls" data-title="6nomads" data-studyresource="https://6nomads.com/" data-desc="Employers / Talents marketplace. Find a full-time remote job in a tech startup 6nomads is a remote-focused job platform for tech talent. Create a profile and let companies apply to you.">
                         </tr>
                         <tr class="_job-pls" data-title=">_findwork.dev" data-studyresource="https://findwork.dev/?search=remote&sort_by=relevance" data-desc="The largest aggregator for developer and design jobs.">
                         </tr>
-                        <!--
-                        <tr class="_job-pls" data-title="" data-studyresource="http://remotejobs.today/" data-desc="">
-                        </tr>
-                        -->
-                        
                         <tr class="_job-pls" data-title="LocalShout" data-studyresource="https://www.localshout.in" data-desc="LocalShout is Best Freelancing site in India to Hire freelancers online or find freelance work online. LocalShout is free to use by freelancers and clients.">
                         </tr>
 
-                        <!--
+                        <!-- 
                         <tr class="_job-pls" data-title="" data-studyresource="" data-desc="">
                         </tr>
                         -->
 
+                        <!-- Acknowledged websites: -->
+                        <!--
+                        <tr class="_job-pls" data-title="" data-studyresource="https://underwearworker.com/" data-desc="">
+                        </tr>
+                        <tr class="_job-pls" data-title="" data-studyresource="http://indiremote.com/" data-desc="">
+                        </tr>
+                        <tr class="_job-pls" data-title="RemotePenguin" data-studyresource="https://www.remotepenguin.com/" data-desc="">
+                        </tr>
+                        <tr class="_job-pls" data-title="" data-studyresource="http://remotejobs.today/" data-desc="">
+                        </tr>
+                        -->
+
+                    </table>
+                </div>
+            </article>
+
+            <article>
+                <div class="row _marketplaces _section">
+                    <h2 id="marketplaces" class="h2 col-lg-12 _h2">Marketplaces <a onclick="return scroll_to_id(event, 'marketplaces');" href="#marketplaces" class="_anchor">#</a></h2>
+                </div>
+                <div class="row">
+                    <table class="table table-hover table-responsive-md _table-responsive">
+                        <tr class="_job-pls" data-title="99designs" data-studyresource="https://99designs.com" data-desc="Get a custom design you’ll love with our global creative platform. 99designs is the best place to find and hire talented designers to grow your business.">
+                        </tr>
+                        <tr class="_job-pls" data-title="Freelancer.com" data-studyresource="https://www.freelancer.com" data-desc="Hire expert freelancers for any job, online. Millions of small businesses use Freelancer to turn their ideas into reality.">
+                        </tr>
+                        <tr class="_job-pls" data-title="Guru" data-studyresource="https://www.guru.com" data-desc="Find &amp; Hire Freelancers. Browse 3 Million+ Experts Free. Guru makes it easy for quality employers and freelancers to connect, collaborate, and get work done flexibly and securely.">
+                        </tr>
+                        <tr class="_job-pls" data-title="Giggrabbers" data-studyresource="https://www.giggrabbers.com" data-desc="Giggrabbers is an online freelancer marketplace with crowdfunding features, making it the first of its kind. Hire freelance web developers, graphic designers, app developers, and raise funds for your projects.">
+                        </tr>
+                        <tr class="_job-pls" data-title="Toptal" data-studyresource="https://www.toptal.com" data-desc="Hire the Top 3% of Freelance Talent. Toptal is an exclusive network of the top freelance software developers, designers, finance experts, product managers, and project managers in the world. Top companies hire Toptal freelancers for their most important projects.">
+                        </tr>
+                        <tr class="_job-pls" data-title="Gigster" data-studyresource="https://gigster.com" data-desc="Build Better Software Faster. Gigster delivers high-impact business outcomes at startup speed.">
+                        </tr>
+                        <tr class="_job-pls" data-title="FreeUp" data-studyresource="https://freeeup.com" data-desc="Hire pre-vetted freelancers and get more done faster. Meet affordable virtual assistants, freelance specialists, and boutique agencies to help grow your business within 1 business day. No sign up fees. No minimums.">
+                        </tr>
+                        <tr class="_job-pls" data-title="Upwork" data-studyresource="https://www.upwork.com" data-desc="Hire freelancers. Make things happen. Get matched to top talent in minutes through our global network of skilled freelancers and professional agencies.">
+                        </tr>
+                        <tr class="_job-pls" data-title="Fiverr" data-studyresource="https://www.fiverr.com" data-desc="Find The Perfect Freelance Services For Your Business.">
+                        </tr>
                     </table>
                 </div>
             </article>
