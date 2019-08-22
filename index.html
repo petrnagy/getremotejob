@@ -71,7 +71,6 @@
 
     <link rel="stylesheet" href="assets/bootstrap.min.css">
     <link rel="stylesheet" href="assets/app.css?v={{version}}">
-    <script async defer src="assets/app.js?v={{version}}"></script>
 </head>
 
 <body id="body" dir="ltr">
@@ -684,6 +683,10 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 
+    <script src="assets/app.js?v={{version}}"></script>
+    <script>
+        init();
+    </script>
 
 </body>
 

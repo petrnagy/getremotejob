@@ -5,8 +5,6 @@
     More at https://getremotejob.xyz/readme.md
 */
 
-window.addEventListener('load', init);
-
 function init() {
     Burger.init();
     paint();
