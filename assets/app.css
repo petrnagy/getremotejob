@@ -141,4 +141,18 @@ body.is-mobile ._menu ._close { position: fixed; right: 0; top: 0; }
 @media screen and (max-width: 799px) { #made-by-pn-widget { display: none !important; } }
 #made-by-pn-widget .img-wrapper, #made-by-pn-widget .text { -webkit-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.24); -moz-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.24); box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.24); }
 #made-by-pn-widget:hover .text { left: 46px; }
+#made-by-pn-widget { display: none !important; }
 /* </Made by ME widget> */
+
+/* <Remote Weekly widget> */
+.remote-weekly { animation: fadein 3s; position: fixed; left: -4px; bottom: -4px; z-index: 1000; }
+.remote-weekly a { color: black; }
+.remote-weekly a:not(:hover) .blue { color: #0084b4; }
+.remote-weekly a:hover, .remote-weekly a:active, .remote-weekly a:focus { color: #00aced; }
+.remote-weekly .text {  width: 340px; text-align: left; position: absolute; left: 35px; top: 10px; bottom: 10px; padding: 5px 10px 5px 45px; border-radius: 5px; background-color: white; font-size: 12px; font-family: 'Courier New', Courier, monospace; z-index: -1; line-height: 20px; }
+.remote-weekly .img-wrapper { border-radius: 50%; padding: 2px; width: 70px; height: 70px; background-color: #333; border: 5px solid white; z-index: 1001; }
+.remote-weekly img { border-radius: 50%; width: 50px; height: 50px; margin: 3px 0 0 3px; z-index: 1001; }
+@media screen and (max-width: 374px) { .remote-weekly { display: none !important; } }
+.remote-weekly .img-wrapper, .remote-weekly .text { -webkit-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.24); -moz-box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.24); box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.24); }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+/* </Remote Weekly widget> */
