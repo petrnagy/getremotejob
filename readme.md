@@ -1,3 +1,5 @@
+[not maintained]
+
 # Get a Remote Job
 
 I made this as a reaction to people asking me what **they** could do that would allow them work remotely.
