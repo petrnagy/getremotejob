@@ -19,8 +19,8 @@ I made this as a reaction to people asking me what **they** could do that would 
 
 ### Links & stuff
 
-- Address: https://getremotejob.xyz
-- Author: https://twitter.com/petrnagy
-- License: https://getremotejob.xyz/LICENSE.txt
-- Contribute: https://github.com/petrnagy/getremotejob (plz send pull requests thx)
-- Repository: https://github.com/petrnagy/getremotejob
+- Address: None, formerly `https://getremotejob.xyz`
+- Author: https://petrnagy.cz
+- License: None
+- Contribute: Repository archived
+- Repository: https://github.com/petrnagy/getremotejob-archive
